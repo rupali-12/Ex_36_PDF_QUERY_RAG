@@ -10,13 +10,14 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 import os
+import streamlit as st
 
 
 # Set up embeddings
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 # Set up Streamlit
-st.title("Conversational RAG With PDF Uploads and Chat History")
+st.title("Pdf Query RAG With Langchain And AstraDB")
 st.write("Upload PDFs and chat with their content")
 
 # Input the Groq API Key
